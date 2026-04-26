@@ -33,5 +33,5 @@ pub fn solve(input: &str) {
             password1 = password1 + 1;
         }
     }
-    println!("\naoc2025_day1 part-1 : {password1}\naoc2025_day1 part-2 : {password2}\n");
+    print!("\n\naoc2025_day1 part-1 : {password1}\naoc2025_day1 part-2 : {password2}\n\n");
 }
