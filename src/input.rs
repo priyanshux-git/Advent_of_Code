@@ -12,7 +12,7 @@ pub fn get_input(year: u16, day: u8) -> String {
     }
 
     println!(
-        "\n\x1b[93mDownloading input for Year-{} Day-{} ...\n\n\x1b[0m",
+        "\n\x1b[93mDownloading input for Year-{} Day-{} ...\x1b[0m",
         year, day
     );
 
