@@ -12,7 +12,7 @@ pub fn get_input(year: u16, day: u8) -> String {
     }
 
     println!(
-        "\n\x1b[93mDownloading input for Year-{} Day-{} ...\x1b[0m",
+        "\n\x1b[93mDownloading input for Year-{} Day-{}....\x1b[0m",
         year, day
     );
 
@@ -32,11 +32,12 @@ pub fn get_input(year: u16, day: u8) -> String {
         .text()
         .expect("\n\x1b[91mFailed to read response text\n\n\x1b[0m");
 
-    // 3. Save it to the cache folder for next time
     if let Some(parent) = path.parent() {
         fs::create_dir_all(parent).expect("\n\x1b[91mFailed to create inputs directory\n\n\x1b[0m");
     }
     fs::write(path, &input).expect("\n\x1b[91mFailed to write input to cache\n\n\x1b[0m");
-
+    
+    println!("\x1b[92mInput Downloaded!\x1b[0m");
+    
     input
 }
